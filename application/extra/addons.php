@@ -3,6 +3,9 @@
 return [
     'autoload' => false,
     'hooks' => [
+        'config_init' => [
+            'nkeditor',
+        ],
         'upgrade' => [
             'shopro',
         ],

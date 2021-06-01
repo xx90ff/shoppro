@@ -11,7 +11,7 @@
  Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 01/06/2021 09:40:05
+ Date: 01/06/2021 14:09:20
 */
 
 SET NAMES utf8mb4;
@@ -43,7 +43,7 @@ CREATE TABLE `fa_admin`  (
 -- ----------------------------
 -- Records of fa_admin
 -- ----------------------------
-INSERT INTO `fa_admin` VALUES (1, 'admin', 'Admin', '560bd3e02ad000ba429ad286cb4c45e7', 'b92613', '/assets/img/avatar.png', 'admin@admin.com', 0, 1617411295, '127.0.0.1', 1491635035, 1617411295, 'ae9b9961-7cce-4c39-bee0-a137195f84a3', 'normal');
+INSERT INTO `fa_admin` VALUES (1, 'admin', 'Admin', '560bd3e02ad000ba429ad286cb4c45e7', 'b92613', '/assets/img/avatar.png', 'admin@admin.com', 0, 1622526892, '127.0.0.1', 1491635035, 1622526892, '2d867bed-1050-4eec-9d8c-c8881ea193dd', 'normal');
 
 -- ----------------------------
 -- Table structure for fa_admin_log
@@ -61,7 +61,7 @@ CREATE TABLE `fa_admin_log`  (
   `createtime` int(10) NULL DEFAULT NULL COMMENT '操作时间',
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `name`(`username`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 60 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '管理员日志表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 129 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '管理员日志表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of fa_admin_log
@@ -123,6 +123,75 @@ INSERT INTO `fa_admin_log` VALUES (56, 1, 'admin', '/wvmzRVQoTl.php/addon/state'
 INSERT INTO `fa_admin_log` VALUES (57, 1, 'admin', '/wvmzRVQoTl.php/addon/get_table_list', '插件管理', '{\"name\":\"nkeditor\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622511545);
 INSERT INTO `fa_admin_log` VALUES (58, 1, 'admin', '/wvmzRVQoTl.php/addon/uninstall', '插件管理', '{\"name\":\"nkeditor\",\"force\":\"0\",\"droptables\":\"1\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622511547);
 INSERT INTO `fa_admin_log` VALUES (59, 1, 'admin', '/wvmzRVQoTl.php/auth/rule/multi', '权限管理 / 菜单规则', '{\"action\":\"\",\"ids\":\"4\",\"params\":\"ismenu=0\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622511591);
+INSERT INTO `fa_admin_log` VALUES (60, 1, 'admin', '/wvmzRVQoTl.php/shopro/user/user/update', 'Shopro商城 / 用户管理 / 更新', '{\"data\":\"{&quot;id&quot;:1,&quot;group_id&quot;:1,&quot;username&quot;:&quot;shopro&quot;,&quot;nickname&quot;:&quot;Shopro-1&quot;,&quot;email&quot;:&quot;shopro@www.shoppro.com&quot;,&quot;mobile&quot;:&quot;13888888888&quot;,&quot;avatar&quot;:&quot;http:\\/\\/api.7wpp.com\\/assets\\/addons\\/shopro\\/img\\/default-avatar.png&quot;,&quot;level&quot;:1,&quot;gender&quot;:0,&quot;birthday&quot;:null,&quot;bio&quot;:&quot;&quot;,&quot;money&quot;:&quot;0.00&quot;,&quot;score&quot;:0,&quot;successions&quot;:1,&quot;maxsuccessions&quot;:1,&quot;prevtime&quot;:1622514576,&quot;logintime&quot;:1622514576,&quot;loginip&quot;:&quot;127.0.0.1&quot;,&quot;loginfailure&quot;:0,&quot;joinip&quot;:&quot;127.0.0.1&quot;,&quot;jointime&quot;:1622514576,&quot;createtime&quot;:1622514576,&quot;updatetime&quot;:1622514576,&quot;token&quot;:&quot;&quot;,&quot;status&quot;:&quot;normal&quot;,&quot;verification&quot;:&quot;&quot;,&quot;parent_user_id&quot;:null,&quot;child_user_count&quot;:0,&quot;child_user_count_1&quot;:0,&quot;child_user_count_2&quot;:0,&quot;total_consume&quot;:&quot;0.00&quot;,&quot;third_platform&quot;:[],&quot;password&quot;:&quot;a147258&quot;}\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622515941);
+INSERT INTO `fa_admin_log` VALUES (61, 1, 'admin', '/wvmzRVQoTl.php/shopro/category/add', 'Shopro商城 / 商品分类 / 添加', '{\"data\":\"{&quot;type&quot;:1,&quot;name&quot;:&quot;电子设备&quot;,&quot;weigh&quot;:0,&quot;status&quot;:&quot;normal&quot;}\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622525266);
+INSERT INTO `fa_admin_log` VALUES (62, 1, 'admin', '/wvmzRVQoTl.php/shopro/category/update?ids=1', 'Shopro商城 / 商品分类 / 保存更新', '{\"ids\":\"1\",\"data\":\"[{&quot;id&quot;:&quot;&quot;,&quot;name&quot;:&quot;笔记本&quot;,&quot;status&quot;:&quot;normal&quot;,&quot;image&quot;:&quot;&quot;,&quot;weigh&quot;:0,&quot;children&quot;:[]},{&quot;id&quot;:&quot;&quot;,&quot;name&quot;:&quot;平板电脑&quot;,&quot;status&quot;:&quot;normal&quot;,&quot;image&quot;:&quot;&quot;,&quot;weigh&quot;:0,&quot;children&quot;:[]}]\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622525318);
+INSERT INTO `fa_admin_log` VALUES (63, 1, 'admin', '/wvmzRVQoTl.php/shopro/category/edit?ids=1', 'Shopro商城 / 商品分类 / 编辑', '{\"ids\":\"1\",\"data\":\"{&quot;type&quot;:&quot;1&quot;,&quot;name&quot;:&quot;商品分类&quot;,&quot;weigh&quot;:0,&quot;status&quot;:&quot;normal&quot;}\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622525487);
+INSERT INTO `fa_admin_log` VALUES (64, 1, 'admin', '/wvmzRVQoTl.php/shopro/category/update?ids=1', 'Shopro商城 / 商品分类 / 保存更新', '{\"ids\":\"1\",\"data\":\"[{&quot;id&quot;:2,&quot;name&quot;:&quot;电子设备&quot;,&quot;type&quot;:&quot;&quot;,&quot;image&quot;:&quot;&quot;,&quot;pid&quot;:1,&quot;weigh&quot;:0,&quot;description&quot;:&quot;&quot;,&quot;status&quot;:&quot;normal&quot;,&quot;createtime&quot;:1622525318,&quot;updatetime&quot;:1622525318},{&quot;id&quot;:3,&quot;name&quot;:&quot;平板电脑&quot;,&quot;type&quot;:&quot;&quot;,&quot;image&quot;:&quot;&quot;,&quot;pid&quot;:1,&quot;weigh&quot;:0,&quot;description&quot;:&quot;&quot;,&quot;status&quot;:&quot;normal&quot;,&quot;createtime&quot;:1622525318,&quot;updatetime&quot;:1622525318,&quot;deleted&quot;:1}]\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622525575);
+INSERT INTO `fa_admin_log` VALUES (65, 1, 'admin', '/wvmzRVQoTl.php/shopro/category/update?ids=1', 'Shopro商城 / 商品分类 / 保存更新', '{\"ids\":\"1\",\"data\":\"[{&quot;id&quot;:2,&quot;name&quot;:&quot;电子设备&quot;,&quot;type&quot;:&quot;&quot;,&quot;image&quot;:&quot;\\/uploads\\/20210601\\/d7a03cee101e1067eb791538b28f63d2.jpg&quot;,&quot;pid&quot;:1,&quot;weigh&quot;:&quot;1&quot;,&quot;description&quot;:&quot;&quot;,&quot;status&quot;:&quot;normal&quot;,&quot;createtime&quot;:1622525318,&quot;updatetime&quot;:1622525575}]\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622525651);
+INSERT INTO `fa_admin_log` VALUES (66, 1, 'admin', '/wvmzRVQoTl.php/shopro/category/update?ids=1', 'Shopro商城 / 商品分类 / 保存更新', '{\"ids\":\"1\",\"data\":\"[{&quot;id&quot;:2,&quot;name&quot;:&quot;电子设备&quot;,&quot;type&quot;:&quot;&quot;,&quot;image&quot;:&quot;\\/uploads\\/20210601\\/d7a03cee101e1067eb791538b28f63d2.jpg&quot;,&quot;pid&quot;:1,&quot;weigh&quot;:1,&quot;description&quot;:&quot;&quot;,&quot;status&quot;:&quot;normal&quot;,&quot;createtime&quot;:1622525318,&quot;updatetime&quot;:1622525651,&quot;deleted&quot;:1}]\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622525692);
+INSERT INTO `fa_admin_log` VALUES (67, 1, 'admin', '/wvmzRVQoTl.php/shopro/category/edit?ids=1', 'Shopro商城 / 商品分类 / 编辑', '{\"ids\":\"1\",\"data\":\"{&quot;type&quot;:2,&quot;name&quot;:&quot;商品分类&quot;,&quot;weigh&quot;:0,&quot;status&quot;:&quot;normal&quot;}\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622525701);
+INSERT INTO `fa_admin_log` VALUES (68, 1, 'admin', '/wvmzRVQoTl.php/shopro/category/edit?ids=1', 'Shopro商城 / 商品分类 / 编辑', '{\"ids\":\"1\",\"data\":\"{&quot;type&quot;:3,&quot;name&quot;:&quot;商品分类&quot;,&quot;weigh&quot;:0,&quot;status&quot;:&quot;normal&quot;}\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622525709);
+INSERT INTO `fa_admin_log` VALUES (69, 1, 'admin', '/wvmzRVQoTl.php/shopro/category/update?ids=1', 'Shopro商城 / 商品分类 / 保存更新', '{\"ids\":\"1\",\"data\":\"[{&quot;id&quot;:&quot;&quot;,&quot;name&quot;:&quot;电子设备&quot;,&quot;status&quot;:&quot;normal&quot;,&quot;image&quot;:&quot;&quot;,&quot;weigh&quot;:0,&quot;children&quot;:[{&quot;id&quot;:&quot;&quot;,&quot;name&quot;:&quot;笔记本&quot;,&quot;status&quot;:&quot;normal&quot;,&quot;image&quot;:&quot;&quot;,&quot;weigh&quot;:0,&quot;children&quot;:[]},{&quot;id&quot;:&quot;&quot;,&quot;name&quot;:&quot;平板电脑&quot;,&quot;status&quot;:&quot;normal&quot;,&quot;image&quot;:&quot;&quot;,&quot;weigh&quot;:0,&quot;children&quot;:[]}]}]\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622525737);
+INSERT INTO `fa_admin_log` VALUES (70, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/service/all', 'Shopro商城 / 服务标签', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526105);
+INSERT INTO `fa_admin_log` VALUES (71, 1, 'admin', '/wvmzRVQoTl.php/shopro/dispatch/dispatch/typeList', 'Shopro商城 / 配送设置 / 发货模板', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526105);
+INSERT INTO `fa_admin_log` VALUES (72, 1, 'admin', '/wvmzRVQoTl.php/shopro/category/update?ids=1', 'Shopro商城 / 商品分类 / 保存更新', '{\"ids\":\"1\",\"data\":\"[{&quot;id&quot;:4,&quot;name&quot;:&quot;服饰装包&quot;,&quot;type&quot;:&quot;&quot;,&quot;image&quot;:&quot;&quot;,&quot;pid&quot;:1,&quot;weigh&quot;:0,&quot;description&quot;:&quot;&quot;,&quot;status&quot;:&quot;normal&quot;,&quot;createtime&quot;:1622525737,&quot;updatetime&quot;:1622525737,&quot;children&quot;:[{&quot;id&quot;:5,&quot;name&quot;:&quot;男士外套&quot;,&quot;type&quot;:&quot;&quot;,&quot;image&quot;:&quot;&quot;,&quot;pid&quot;:4,&quot;weigh&quot;:0,&quot;description&quot;:&quot;&quot;,&quot;status&quot;:&quot;normal&quot;,&quot;createtime&quot;:1622525737,&quot;updatetime&quot;:1622525737},{&quot;id&quot;:6,&quot;name&quot;:&quot;女士裙装&quot;,&quot;type&quot;:&quot;&quot;,&quot;image&quot;:&quot;&quot;,&quot;pid&quot;:4,&quot;weigh&quot;:0,&quot;description&quot;:&quot;&quot;,&quot;status&quot;:&quot;normal&quot;,&quot;createtime&quot;:1622525737,&quot;updatetime&quot;:1622525737}]}]\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526305);
+INSERT INTO `fa_admin_log` VALUES (73, 1, 'admin', '/wvmzRVQoTl.php/shopro/dispatch/dispatch/typeList', 'Shopro商城 / 配送设置 / 发货模板', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526339);
+INSERT INTO `fa_admin_log` VALUES (74, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/service/all', 'Shopro商城 / 服务标签', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526339);
+INSERT INTO `fa_admin_log` VALUES (75, 1, 'admin', '/wvmzRVQoTl.php/ajax/upload', '', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526401);
+INSERT INTO `fa_admin_log` VALUES (76, 1, 'admin', '/wvmzRVQoTl.php/ajax/upload', '', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526457);
+INSERT INTO `fa_admin_log` VALUES (77, 1, 'admin', '/wvmzRVQoTl.php/ajax/upload', '', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526457);
+INSERT INTO `fa_admin_log` VALUES (78, 1, 'admin', '/wvmzRVQoTl.php/ajax/upload', '', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526457);
+INSERT INTO `fa_admin_log` VALUES (79, 1, 'admin', '/wvmzRVQoTl.php/shopro/dispatch/express/add', 'Shopro商城 / 配送设置 / 物流快递 / 添加', '{\"data\":\"{&quot;name&quot;:&quot;全国&quot;,&quot;type&quot;:&quot;number&quot;,&quot;express&quot;:[{&quot;first_num&quot;:0,&quot;first_price&quot;:0,&quot;additional_num&quot;:0,&quot;additional_price&quot;:0,&quot;province_ids&quot;:&quot;110000,120000,130000,140000,150000,210000,220000,230000,310000,320000,330000,340000,350000,360000,370000,410000,420000,430000,440000,450000,460000,500000,510000,520000,530000,540000,610000,620000,630000,640000,650000,710000,810000,820000&quot;,&quot;city_ids&quot;:&quot;&quot;,&quot;area_ids&quot;:&quot;&quot;,&quot;weigh&quot;:1}]}\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526507);
+INSERT INTO `fa_admin_log` VALUES (80, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/service/all', 'Shopro商城 / 服务标签', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526552);
+INSERT INTO `fa_admin_log` VALUES (81, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/goods/add', 'Shopro商城 / 商品管理 / 添加', '{\"row\":{\"category_ids\":\"5\",\"content\":\"\",\"dispatch_ids\":\"1\",\"dispatch_type\":\"express\",\"expire_day\":\"0\",\"image\":\"\\/uploads\\/20210601\\/e3e96da45a068da5c3ecea808b573a9b.jpg\",\"images\":\"\\/uploads\\/20210601\\/4f66c8067382ef0bb3a9b18da85f866b.jpg,\\/uploads\\/20210601\\/5f45bc1f3fca51e3582e1d23109aa7aa.jpg,\\/uploads\\/20210601\\/412a2c1b65cd9d570c265829355b5f69.jpg\",\"is_sku\":\"0\",\"original_price\":\"220\",\"params\":\"[]\",\"price\":\"169\",\"service_ids\":\"4,3,2,1\",\"show_sales\":\"\",\"status\":\"up\",\"subtitle\":\"正品保证 放心购\",\"title\":\"安踏外套男装官网正品2020春夏季新款连帽健身休闲夹克卫衣运动服\",\"type\":\"normal\",\"views\":\"\",\"weigh\":\"\",\"weight\":\"\",\"stock\":\"1000\",\"sn\":\"\",\"autosend_content\":\"\"},\"sku\":{\"listData\":\"[]\",\"priceData\":\"[]\"}}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526561);
+INSERT INTO `fa_admin_log` VALUES (82, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/service/all', 'Shopro商城 / 服务标签', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526567);
+INSERT INTO `fa_admin_log` VALUES (83, 1, 'admin', '/wvmzRVQoTl.php/shopro/dispatch/dispatch/typeList', 'Shopro商城 / 配送设置 / 发货模板', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526567);
+INSERT INTO `fa_admin_log` VALUES (84, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/goods/detail/ids/1', 'Shopro商城 / 商品管理 / 查看详情', '{\"ids\":\"1\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526567);
+INSERT INTO `fa_admin_log` VALUES (85, 1, 'admin', '/wvmzRVQoTl.php/shopro/dispatch/dispatch/typeList', 'Shopro商城 / 配送设置 / 发货模板', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526617);
+INSERT INTO `fa_admin_log` VALUES (86, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/service/all', 'Shopro商城 / 服务标签', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526617);
+INSERT INTO `fa_admin_log` VALUES (87, 1, 'admin', '/wvmzRVQoTl.php/ajax/upload', '', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526744);
+INSERT INTO `fa_admin_log` VALUES (88, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/service/all', 'Shopro商城 / 服务标签', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526795);
+INSERT INTO `fa_admin_log` VALUES (89, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/goods/add', 'Shopro商城 / 商品管理 / 添加', '{\"row\":{\"category_ids\":\"6\",\"content\":\"\",\"dispatch_ids\":\"1\",\"dispatch_type\":\"express\",\"expire_day\":\"0\",\"image\":\"\\/uploads\\/20210601\\/3327f635ab3384d526fc8c3159c839e9.jpg\",\"images\":\"\\/uploads\\/20210601\\/3327f635ab3384d526fc8c3159c839e9.jpg\",\"is_sku\":\"0\",\"original_price\":\"200\",\"params\":\"[]\",\"price\":\"165\",\"service_ids\":\"4,3,2,1\",\"show_sales\":\"\",\"status\":\"up\",\"subtitle\":\"正品保证 放心购\",\"title\":\"白色雪纺连衣裙20新款女夏季流行女士收腰气质超仙女甜美长裙子 白色 M\",\"type\":\"normal\",\"views\":\"\",\"weigh\":\"\",\"weight\":\"\",\"stock\":\"1000\",\"sn\":\"\",\"autosend_content\":\"\"},\"sku\":{\"listData\":\"[]\",\"priceData\":\"[]\"}}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526800);
+INSERT INTO `fa_admin_log` VALUES (90, 1, 'admin', '/wvmzRVQoTl.php/auth/rule/multi', '权限管理 / 菜单规则', '{\"action\":\"\",\"ids\":\"4\",\"params\":\"ismenu=1\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526809);
+INSERT INTO `fa_admin_log` VALUES (91, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/service/all', 'Shopro商城 / 服务标签', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526868);
+INSERT INTO `fa_admin_log` VALUES (92, 1, 'admin', '/wvmzRVQoTl.php/shopro/dispatch/dispatch/typeList', 'Shopro商城 / 配送设置 / 发货模板', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526868);
+INSERT INTO `fa_admin_log` VALUES (93, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/goods/detail/ids/2', 'Shopro商城 / 商品管理 / 查看详情', '{\"ids\":\"2\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526868);
+INSERT INTO `fa_admin_log` VALUES (94, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/service/all', 'Shopro商城 / 服务标签', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526877);
+INSERT INTO `fa_admin_log` VALUES (95, 1, 'admin', '/wvmzRVQoTl.php/shopro/dispatch/dispatch/typeList', 'Shopro商城 / 配送设置 / 发货模板', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526877);
+INSERT INTO `fa_admin_log` VALUES (96, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/goods/detail/ids/2', 'Shopro商城 / 商品管理 / 查看详情', '{\"ids\":\"2\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526877);
+INSERT INTO `fa_admin_log` VALUES (97, 1, 'admin', '/wvmzRVQoTl.php/index/login', '登录', '{\"__token__\":\"***\",\"username\":\"admin\",\"password\":\"***\",\"captcha\":\"42yq\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526892);
+INSERT INTO `fa_admin_log` VALUES (98, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/service/all', 'Shopro商城 / 服务标签', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526900);
+INSERT INTO `fa_admin_log` VALUES (99, 1, 'admin', '/wvmzRVQoTl.php/shopro/dispatch/dispatch/typeList', 'Shopro商城 / 配送设置 / 发货模板', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526900);
+INSERT INTO `fa_admin_log` VALUES (100, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/goods/detail/ids/2', 'Shopro商城 / 商品管理 / 查看详情', '{\"ids\":\"2\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526900);
+INSERT INTO `fa_admin_log` VALUES (101, 1, 'admin', '/wvmzRVQoTl.php/addon/state', '插件管理 / 禁用启用', '{\"name\":\"nkeditor\",\"action\":\"disable\",\"force\":\"0\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526919);
+INSERT INTO `fa_admin_log` VALUES (102, 1, 'admin', '/wvmzRVQoTl.php/addon/state', '插件管理 / 禁用启用', '{\"name\":\"nkeditor\",\"action\":\"enable\",\"force\":\"0\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526920);
+INSERT INTO `fa_admin_log` VALUES (103, 1, 'admin', '/wvmzRVQoTl.php/shopro/dispatch/dispatch/typeList', 'Shopro商城 / 配送设置 / 发货模板', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526926);
+INSERT INTO `fa_admin_log` VALUES (104, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/service/all', 'Shopro商城 / 服务标签', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526926);
+INSERT INTO `fa_admin_log` VALUES (105, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/goods/detail/ids/2', 'Shopro商城 / 商品管理 / 查看详情', '{\"ids\":\"2\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526926);
+INSERT INTO `fa_admin_log` VALUES (106, 1, 'admin', '/wvmzRVQoTl.php/addon/state', '插件管理 / 禁用启用', '{\"name\":\"nkeditor\",\"action\":\"disable\",\"force\":\"0\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526940);
+INSERT INTO `fa_admin_log` VALUES (107, 1, 'admin', '/wvmzRVQoTl.php/addon/get_table_list', '插件管理', '{\"name\":\"nkeditor\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526943);
+INSERT INTO `fa_admin_log` VALUES (108, 1, 'admin', '/wvmzRVQoTl.php/addon/uninstall', '插件管理', '{\"name\":\"nkeditor\",\"force\":\"0\",\"droptables\":\"1\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526945);
+INSERT INTO `fa_admin_log` VALUES (109, 1, 'admin', '/wvmzRVQoTl.php/addon/install', '插件管理', '{\"name\":\"nkeditor\",\"force\":\"0\",\"uid\":\"4349\",\"token\":\"***\",\"version\":\"1.0.12\",\"faversion\":\"1.2.0.20210401_beta\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526978);
+INSERT INTO `fa_admin_log` VALUES (110, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/service/all', 'Shopro商城 / 服务标签', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526988);
+INSERT INTO `fa_admin_log` VALUES (111, 1, 'admin', '/wvmzRVQoTl.php/shopro/dispatch/dispatch/typeList', 'Shopro商城 / 配送设置 / 发货模板', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526988);
+INSERT INTO `fa_admin_log` VALUES (112, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/goods/detail/ids/2', 'Shopro商城 / 商品管理 / 查看详情', '{\"ids\":\"2\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622526988);
+INSERT INTO `fa_admin_log` VALUES (113, 1, 'admin', '/wvmzRVQoTl.php/auth/rule/multi', '权限管理 / 菜单规则', '{\"action\":\"\",\"ids\":\"4\",\"params\":\"ismenu=0\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622527009);
+INSERT INTO `fa_admin_log` VALUES (114, 1, 'admin', '/wvmzRVQoTl.php/shopro/dispatch/dispatch/typeList', 'Shopro商城 / 配送设置 / 发货模板', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622527032);
+INSERT INTO `fa_admin_log` VALUES (115, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/service/all', 'Shopro商城 / 服务标签', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622527032);
+INSERT INTO `fa_admin_log` VALUES (116, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/goods/detail/ids/2', 'Shopro商城 / 商品管理 / 查看详情', '{\"ids\":\"2\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622527032);
+INSERT INTO `fa_admin_log` VALUES (117, 1, 'admin', '/wvmzRVQoTl.php/ajax/upload', '', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622527128);
+INSERT INTO `fa_admin_log` VALUES (118, 1, 'admin', '/wvmzRVQoTl.php/ajax/upload', '', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622527142);
+INSERT INTO `fa_admin_log` VALUES (119, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/goods/edit/ids/2', 'Shopro商城 / 商品管理 / 编辑', '{\"row\":{\"category_ids\":\"6\",\"content\":\"\",\"dispatch_ids\":\"1\",\"dispatch_type\":\"express\",\"expire_day\":\"0\",\"image\":\"\\/uploads\\/20210601\\/3327f635ab3384d526fc8c3159c839e9.jpg\",\"images\":\"\\/uploads\\/20210601\\/3327f635ab3384d526fc8c3159c839e9.jpg\",\"is_sku\":\"0\",\"original_price\":\"200.00\",\"params\":\"[]\",\"price\":\"165\",\"service_ids\":\"4,3,2,1\",\"show_sales\":\"\",\"status\":\"up\",\"subtitle\":\"正品保证 放心购\",\"title\":\"白色雪纺连衣裙20新款女夏季流行女士收腰气质超仙女甜美长裙子 白色 M\",\"type\":\"normal\",\"views\":\"\",\"weigh\":\"\",\"weight\":\"\",\"stock\":\"1000\",\"sn\":\"\",\"autosend_content\":\"\"},\"sku\":{\"listData\":\"[]\",\"priceData\":\"[]\"},\"ids\":\"2\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622527161);
+INSERT INTO `fa_admin_log` VALUES (120, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/service/all', 'Shopro商城 / 服务标签', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622527233);
+INSERT INTO `fa_admin_log` VALUES (121, 1, 'admin', '/wvmzRVQoTl.php/shopro/dispatch/dispatch/typeList', 'Shopro商城 / 配送设置 / 发货模板', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622527233);
+INSERT INTO `fa_admin_log` VALUES (122, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/goods/detail/ids/1', 'Shopro商城 / 商品管理 / 查看详情', '{\"ids\":\"1\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622527233);
+INSERT INTO `fa_admin_log` VALUES (123, 1, 'admin', '/wvmzRVQoTl.php/ajax/upload', '', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622527247);
+INSERT INTO `fa_admin_log` VALUES (124, 1, 'admin', '/wvmzRVQoTl.php/ajax/upload', '', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622527252);
+INSERT INTO `fa_admin_log` VALUES (125, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/goods/edit/ids/1', 'Shopro商城 / 商品管理 / 编辑', '{\"row\":{\"category_ids\":\"5\",\"content\":\"\",\"dispatch_ids\":\"1\",\"dispatch_type\":\"express\",\"expire_day\":\"0\",\"image\":\"\\/uploads\\/20210601\\/e3e96da45a068da5c3ecea808b573a9b.jpg\",\"images\":\"\\/uploads\\/20210601\\/4f66c8067382ef0bb3a9b18da85f866b.jpg,\\/uploads\\/20210601\\/5f45bc1f3fca51e3582e1d23109aa7aa.jpg,\\/uploads\\/20210601\\/412a2c1b65cd9d570c265829355b5f69.jpg\",\"is_sku\":\"0\",\"original_price\":\"220.00\",\"params\":\"[]\",\"price\":\"169\",\"service_ids\":\"4,3,2,1\",\"show_sales\":\"\",\"status\":\"up\",\"subtitle\":\"正品保证 放心购\",\"title\":\"安踏外套男装官网正品2020春夏季新款连帽健身休闲夹克卫衣运动服\",\"type\":\"normal\",\"views\":\"\",\"weigh\":\"\",\"weight\":\"\",\"stock\":\"1000\",\"sn\":\"\",\"autosend_content\":\"\"},\"sku\":{\"listData\":\"[]\",\"priceData\":\"[]\"},\"ids\":\"1\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622527264);
+INSERT INTO `fa_admin_log` VALUES (126, 1, 'admin', '/wvmzRVQoTl.php/shopro/dispatch/dispatch/typeList', 'Shopro商城 / 配送设置 / 发货模板', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622527532);
+INSERT INTO `fa_admin_log` VALUES (127, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/service/all', 'Shopro商城 / 服务标签', '[]', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622527532);
+INSERT INTO `fa_admin_log` VALUES (128, 1, 'admin', '/wvmzRVQoTl.php/shopro/goods/goods/detail/ids/1', 'Shopro商城 / 商品管理 / 查看详情', '{\"ids\":\"1\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0', 1622527532);
 
 -- ----------------------------
 -- Table structure for fa_area
@@ -168,13 +237,22 @@ CREATE TABLE `fa_attachment`  (
   `storage` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'local' COMMENT '存储位置',
   `sha1` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT '' COMMENT '文件 sha1编码',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '附件表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '附件表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of fa_attachment
 -- ----------------------------
 INSERT INTO `fa_attachment` VALUES (1, 1, 0, '/assets/img/qrcode.png', '150', '150', 'png', 0, 'qrcode.png', 21859, 'image/png', '', 1491635035, 1491635035, 1491635035, 'local', '17163603d0263e4838b9387ff2cd4877e8b018f6');
 INSERT INTO `fa_attachment` VALUES (2, 1, 0, '/uploads/20210601/d7a03cee101e1067eb791538b28f63d2.jpg', '110', '110', 'jpg', 0, 'tb.1.2e6dd63d.kfm-1cjhe2aKYqT2N5jx4g.jpg', 4915, 'image/jpeg', '', 1622511308, 1622511308, 1622511308, 'local', '1037e65ad74907c6ea5b72f2e7771ac9cc065ed6');
+INSERT INTO `fa_attachment` VALUES (3, 1, 0, '/uploads/20210601/e3e96da45a068da5c3ecea808b573a9b.jpg', '430', '430', 'jpg', 0, 'e3e96da45a068da5c3ecea808b573a9b.jpg_430x430q90.jpg', 34974, 'image/jpeg', '', 1622526401, 1622526401, 1622526401, 'local', '5c830c19bbb287731c9d314e840a48a1850ea3ca');
+INSERT INTO `fa_attachment` VALUES (4, 1, 0, '/uploads/20210601/4f66c8067382ef0bb3a9b18da85f866b.jpg', '430', '430', 'jpg', 0, '4f66c8067382ef0bb3a9b18da85f866b.jpg_430x430q90.jpg', 34817, 'image/jpeg', '', 1622526457, 1622526457, 1622526457, 'local', '38f3ffd003fbce107e82f7654d21e421bb9043ce');
+INSERT INTO `fa_attachment` VALUES (5, 1, 0, '/uploads/20210601/5f45bc1f3fca51e3582e1d23109aa7aa.jpg', '430', '430', 'jpg', 0, '5f45bc1f3fca51e3582e1d23109aa7aa.jpg_430x430q90.jpg', 41265, 'image/jpeg', '', 1622526457, 1622526457, 1622526457, 'local', '327abd34572a4862e2bed3b4724123b6a31e27ea');
+INSERT INTO `fa_attachment` VALUES (6, 1, 0, '/uploads/20210601/412a2c1b65cd9d570c265829355b5f69.jpg', '430', '430', 'jpg', 0, '412a2c1b65cd9d570c265829355b5f69.jpg', 38034, 'image/jpeg', '', 1622526457, 1622526457, 1622526457, 'local', 'a75a890bdc209dc00e37a1afe7b2b6c5ad201e01');
+INSERT INTO `fa_attachment` VALUES (7, 1, 0, '/uploads/20210601/3327f635ab3384d526fc8c3159c839e9.jpg', '750', '750', 'jpg', 0, '3327f635ab3384d526fc8c3159c839e9.jpg', 95723, 'image/jpeg', '', 1622526744, 1622526744, 1622526744, 'local', 'bbe4565845edbd30df694719f245bb23ab12b59f');
+INSERT INTO `fa_attachment` VALUES (8, 1, 0, '/uploads/20210601/99e106b28915a19e57f1b8b6691288dc.jpg', '640', '896', 'jpg', 0, '99e106b28915a19e57f1b8b6691288dc.jpg', 83416, 'image/jpeg', '', 1622527128, 1622527128, 1622527128, 'local', '45c9b8e30c4ecb73060f73832049e0fea1261739');
+INSERT INTO `fa_attachment` VALUES (9, 1, 0, '/uploads/20210601/8b367f40e31646844ddf3e6279b59713.jpg', '640', '705', 'jpg', 0, '8b367f40e31646844ddf3e6279b59713.jpg', 72750, 'image/jpeg', '', 1622527142, 1622527142, 1622527142, 'local', '56c0640210175c3d83f548bd52313598b0f4dd75');
+INSERT INTO `fa_attachment` VALUES (10, 1, 0, '/uploads/20210601/06d2dcf97fdf2287791678221d3bedd9.jpg', '790', '980', 'jpg', 0, '06d2dcf97fdf2287791678221d3bedd9.jpg', 354536, 'image/jpeg', '', 1622527246, 1622527246, 1622527246, 'local', '2d5f310dd2a8cc5711cc4ed235462da6c31da184');
+INSERT INTO `fa_attachment` VALUES (11, 1, 0, '/uploads/20210601/9a6b2c41e475055c53eeaee71b538319.jpg', '790', '1100', 'jpg', 0, '9a6b2c41e475055c53eeaee71b538319.jpg', 569117, 'image/jpeg', '', 1622527252, 1622527252, 1622527252, 'local', 'ec699641cf09b4e717561910c9b6f1be62600951');
 
 -- ----------------------------
 -- Table structure for fa_auth_group
@@ -250,7 +328,7 @@ CREATE TABLE `fa_auth_rule`  (
 INSERT INTO `fa_auth_rule` VALUES (1, 'file', 0, 'dashboard', 'Dashboard', 'fa fa-dashboard', '', '', 'Dashboard tips', 0, NULL, '', 1491635035, 1622510870, 137, 'normal');
 INSERT INTO `fa_auth_rule` VALUES (2, 'file', 0, 'general', 'General', 'fa fa-cogs', '', '', '', 1, NULL, '', 1491635035, 1491635035, 119, 'normal');
 INSERT INTO `fa_auth_rule` VALUES (3, 'file', 0, 'category', 'Category', 'fa fa-leaf', '', '', 'Category tips', 0, NULL, '', 1491635035, 1622510778, 99, 'normal');
-INSERT INTO `fa_auth_rule` VALUES (4, 'file', 0, 'addon', 'Addon', 'fa fa-rocket', '', '', 'Addon tips', 0, NULL, '', 1491635035, 1622511591, 0, 'normal');
+INSERT INTO `fa_auth_rule` VALUES (4, 'file', 0, 'addon', 'Addon', 'fa fa-rocket', '', '', 'Addon tips', 0, NULL, '', 1491635035, 1622527009, 0, 'normal');
 INSERT INTO `fa_auth_rule` VALUES (5, 'file', 0, 'auth', 'Auth', 'fa fa-group', '', '', '', 1, NULL, '', 1491635035, 1491635035, 0, 'normal');
 INSERT INTO `fa_auth_rule` VALUES (6, 'file', 2, 'general/config', 'Config', 'fa fa-cog', '', '', 'Config tips', 1, NULL, '', 1491635035, 1491635035, 60, 'normal');
 INSERT INTO `fa_auth_rule` VALUES (7, 'file', 2, 'general/attachment', 'Attachment', 'fa fa-file-image-o', '', '', 'Attachment tips', 1, NULL, '', 1491635035, 1491635035, 53, 'normal');
@@ -4725,7 +4803,15 @@ CREATE TABLE `fa_shopro_category`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `pid`(`pid`) USING BTREE,
   INDEX `weigh_id`(`weigh`, `id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商城分类表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商城分类表' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of fa_shopro_category
+-- ----------------------------
+INSERT INTO `fa_shopro_category` VALUES (1, '商品分类', '3', '', 0, 0, '', 'normal', 1622525266, 1622525709);
+INSERT INTO `fa_shopro_category` VALUES (4, '服饰装包', '', '', 1, 0, '', 'normal', 1622525737, 1622526305);
+INSERT INTO `fa_shopro_category` VALUES (5, '男士外套', '', '', 4, 0, '', 'normal', 1622525737, 1622526305);
+INSERT INTO `fa_shopro_category` VALUES (6, '女士裙装', '', '', 4, 0, '', 'normal', 1622525737, 1622526305);
 
 -- ----------------------------
 -- Table structure for fa_shopro_chat
@@ -5116,7 +5202,12 @@ CREATE TABLE `fa_shopro_dispatch`  (
   `updatetime` int(11) NULL DEFAULT NULL COMMENT '更新时间',
   `deletetime` int(11) NULL DEFAULT NULL COMMENT '删除时间',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '发货设置' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '发货设置' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of fa_shopro_dispatch
+-- ----------------------------
+INSERT INTO `fa_shopro_dispatch` VALUES (1, '全国', 'express', '1', 1622526507, 1622526507, NULL);
 
 -- ----------------------------
 -- Table structure for fa_shopro_dispatch_autosend
@@ -5151,7 +5242,12 @@ CREATE TABLE `fa_shopro_dispatch_express`  (
   `updatetime` int(11) NULL DEFAULT NULL COMMENT '更新时间',
   `deletetime` int(11) NULL DEFAULT NULL COMMENT '删除时间',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '运费模板' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '运费模板' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of fa_shopro_dispatch_express
+-- ----------------------------
+INSERT INTO `fa_shopro_dispatch_express` VALUES (1, 'number', 1, 0, 0.00, 0, 0.00, '110000,120000,130000,140000,150000,210000,220000,230000,310000,320000,330000,340000,350000,360000,370000,410000,420000,430000,440000,450000,460000,500000,510000,520000,530000,540000,610000,620000,630000,640000,650000,710000,810000,820000', '', '', 1622526507, 1622526507, NULL);
 
 -- ----------------------------
 -- Table structure for fa_shopro_dispatch_selfetch
@@ -5586,7 +5682,13 @@ CREATE TABLE `fa_shopro_goods`  (
   `updatetime` int(11) NULL DEFAULT NULL COMMENT '更新时间',
   `deletetime` int(11) NULL DEFAULT NULL COMMENT '删除时间',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '商品' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '商品' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of fa_shopro_goods
+-- ----------------------------
+INSERT INTO `fa_shopro_goods` VALUES (1, 'normal', '安踏外套男装官网正品2020春夏季新款连帽健身休闲夹克卫衣运动服', '正品保证 放心购 ', 'up', 0, '5', '/uploads/20210601/e3e96da45a068da5c3ecea808b573a9b.jpg', '/uploads/20210601/4f66c8067382ef0bb3a9b18da85f866b.jpg,/uploads/20210601/5f45bc1f3fca51e3582e1d23109aa7aa.jpg,/uploads/20210601/412a2c1b65cd9d570c265829355b5f69.jpg', '[]', '<div align=\"center\"><img src=\"/uploads/20210601/06d2dcf97fdf2287791678221d3bedd9.jpg\" alt=\"\" /><img src=\"/uploads/20210601/9a6b2c41e475055c53eeaee71b538319.jpg\" alt=\"\" /></div>', '169', 220.00, 0, 0, 0, 0, 0, '4,3,2,1', 'express', '1', 1622526561, 1622527264, NULL);
+INSERT INTO `fa_shopro_goods` VALUES (2, 'normal', '白色雪纺连衣裙20新款女夏季流行女士收腰气质超仙女甜美长裙子 白色 M', '正品保证 放心购 ', 'up', 0, '6', '/uploads/20210601/3327f635ab3384d526fc8c3159c839e9.jpg', '/uploads/20210601/3327f635ab3384d526fc8c3159c839e9.jpg', '[]', '<div align=\"center\"><img src=\"/uploads/20210601/99e106b28915a19e57f1b8b6691288dc.jpg\" alt=\"\" /><img src=\"/uploads/20210601/8b367f40e31646844ddf3e6279b59713.jpg\" alt=\"\" /></div>', '165', 200.00, 0, 0, 0, 0, 0, '4,3,2,1', 'express', '1', 1622526800, 1622527161, NULL);
 
 -- ----------------------------
 -- Table structure for fa_shopro_goods_comment
@@ -5668,7 +5770,13 @@ CREATE TABLE `fa_shopro_goods_sku_price`  (
   `updatetime` int(11) NULL DEFAULT NULL,
   `deletetime` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '商品规格' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '商品规格' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of fa_shopro_goods_sku_price
+-- ----------------------------
+INSERT INTO `fa_shopro_goods_sku_price` VALUES (1, NULL, 1, 0, NULL, 1000, 0, '', 0, 169.00, NULL, 'up', 1622526561, 1622526561, NULL);
+INSERT INTO `fa_shopro_goods_sku_price` VALUES (2, NULL, 2, 0, NULL, 1000, 0, '', 0, 165.00, NULL, 'up', 1622526800, 1622526800, NULL);
 
 -- ----------------------------
 -- Table structure for fa_shopro_link
@@ -6515,12 +6623,13 @@ CREATE TABLE `fa_user`  (
   INDEX `email`(`email`) USING BTREE,
   INDEX `mobile`(`mobile`) USING BTREE,
   INDEX `parent_user_id`(`parent_user_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '会员表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '会员表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of fa_user
 -- ----------------------------
-INSERT INTO `fa_user` VALUES (1, 1, 'admin', 'admin', 'cf1a275a813c6112954968f9d7783f41', '4ecb4b', 'admin@163.com', '13888888888', '/uploads/20210601/d7a03cee101e1067eb791538b28f63d2.jpg', 0, 0, '2017-04-08', '', 0.00, 0, 1, 1, 1491635035, 1491635035, '127.0.0.1', 0, '127.0.0.1', 1491635035, 0, 1622511312, '', 'normal', '', NULL, 0, 0, 0, 0.00);
+INSERT INTO `fa_user` VALUES (1, 1, 'shopro', 'Shopro-1', '16e1dc8ea4fbadb374b83087f7fc538e', 'eul2L4', 'shopro@www.shoppro.com', '13888888888', 'http://api.7wpp.com/assets/addons/shopro/img/default-avatar.png', 1, 0, NULL, '', 0.00, 0, 1, 1, 1622517088, 1622517666, '127.0.0.1', 0, '127.0.0.1', 1622516171, 1622516171, 1622517666, '', 'normal', '', NULL, 0, 0, 0, 0.00);
+INSERT INTO `fa_user` VALUES (2, 1, '13439302541', 'Shopro-2', '9e8c10325649d2663cedb4b7aa1f5b4c', 'OadGFE', '13439302541@www.shoppro.com', '13439302541', 'http://api.7wpp.com/assets/addons/shopro/img/default-avatar.png', 1, 0, NULL, '', 0.00, 0, 1, 1, 1622517477, 1622517485, '127.0.0.1', 0, '127.0.0.1', 1622516909, 1622516909, 1622517485, '', 'normal', '', NULL, 0, 0, 0, 0.00);
 
 -- ----------------------------
 -- Table structure for fa_user_group
@@ -6646,6 +6755,44 @@ CREATE TABLE `fa_user_token`  (
   `expiretime` int(10) NULL DEFAULT NULL COMMENT '过期时间',
   PRIMARY KEY (`token`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '会员Token表' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of fa_user_token
+-- ----------------------------
+INSERT INTO `fa_user_token` VALUES ('004b80a93c4c3804f041015bf917fe5089cb2973', 18, 1622514114, 1625106114);
+INSERT INTO `fa_user_token` VALUES ('0df8a969d36a5b177408a2cea42f7b27bc535a70', 20, 1622514176, 1625106176);
+INSERT INTO `fa_user_token` VALUES ('0f24b0e87014a5bc61862eed3126f7009d2e7372', 1, 1622516172, 1625108172);
+INSERT INTO `fa_user_token` VALUES ('12bceef013608da69dd123446933f9825644cab4', 10, 1622513886, 1625105886);
+INSERT INTO `fa_user_token` VALUES ('140ee8eab1a3b5d210ff0c4905e32cbe088a457a', 9, 1622513859, 1625105859);
+INSERT INTO `fa_user_token` VALUES ('152dd7e73460120468fb17b37774d8c434efd65b', 17, 1622514102, 1625106102);
+INSERT INTO `fa_user_token` VALUES ('1a263e2400ac45a2aa97fb34048fea75a731e455', 3, 1622513088, 1625105088);
+INSERT INTO `fa_user_token` VALUES ('24802d2c819cba567b3be01f797a891a0623ee18', 2, 1622514643, 1625106643);
+INSERT INTO `fa_user_token` VALUES ('29ccbf663dab7ca96d1a8b65d3777eb553b7ed56', 1, 1622514535, 1625106535);
+INSERT INTO `fa_user_token` VALUES ('2a4064479e65d52f42a73e4f6732abfdb43e9754', 5, 1622513151, 1625105151);
+INSERT INTO `fa_user_token` VALUES ('36d4d3b5f7f916d2ae8724857b36faea4ac66988', 2, 1622516909, 1625108909);
+INSERT INTO `fa_user_token` VALUES ('400ee0b0968bf01660ea24b767fc008985ff8881', 3, 1622514688, 1625106688);
+INSERT INTO `fa_user_token` VALUES ('406a9d6666cf7bb60d05c78ef65d0d53b18a3a89', 13, 1622514003, 1625106003);
+INSERT INTO `fa_user_token` VALUES ('49fee1a8ebf23ded1881e81f35bbad3ebd1c290f', 4, 1622513130, 1625105130);
+INSERT INTO `fa_user_token` VALUES ('4f6db503f5b2d56aa4b83e21d2b419f10abf56e4', 1, 1622516278, 1625108278);
+INSERT INTO `fa_user_token` VALUES ('59b529dd395b5c6d03d00bae5ea9fc74ff5b1251', 2, 1622517485, 1625109485);
+INSERT INTO `fa_user_token` VALUES ('5dd34fd0cead694f573a039a4edcd6c9e1b6585d', 19, 1622514156, 1625106156);
+INSERT INTO `fa_user_token` VALUES ('6d87de13dbe134234549f7b21b03d7a4fa489c75', 6, 1622513220, 1625105220);
+INSERT INTO `fa_user_token` VALUES ('702191269eb4a56e327642173d3c32c53149197c', 16, 1622514084, 1625106084);
+INSERT INTO `fa_user_token` VALUES ('725f47bd10aaefc24bb245c82b8621aa693553b8', 21, 1622514187, 1625106187);
+INSERT INTO `fa_user_token` VALUES ('989bef834b66b04e39f92d03c6b263d6474d6385', 11, 1622513915, 1625105915);
+INSERT INTO `fa_user_token` VALUES ('a0ac6b4fb140824e68a201d0fa44d5d1b7fa74b0', 12, 1622513965, 1625105965);
+INSERT INTO `fa_user_token` VALUES ('a8cdb07de9886d8445890ed44d99777007c1d523', 2, 1622517477, 1625109477);
+INSERT INTO `fa_user_token` VALUES ('af2a3f1ee1960f8c0705c4da01199af721fc1720', 8, 1622513728, 1625105728);
+INSERT INTO `fa_user_token` VALUES ('b292cfc4de59ac584ad300c4b9925e8881a0ce00', 1, 1622515947, 1625107947);
+INSERT INTO `fa_user_token` VALUES ('b44a5ad6fe0548d98159ebe239ccb7a83237a34a', 15, 1622514049, 1625106049);
+INSERT INTO `fa_user_token` VALUES ('b4e27a590d01235919d99e841416ac18486bdad1', 7, 1622513534, 1625105534);
+INSERT INTO `fa_user_token` VALUES ('c0f47dd5fceec57219292b7a3e1a0194dc60e4f9', 1, 1622516307, 1625108307);
+INSERT INTO `fa_user_token` VALUES ('c1d8983b7ba76edebb7354ce2c68adbaa4fc1acf', 14, 1622514024, 1625106024);
+INSERT INTO `fa_user_token` VALUES ('d386c5b1e87e552a2e2964df0f3964644e181fc9', 1, 1622514576, 1625106576);
+INSERT INTO `fa_user_token` VALUES ('d766f4085ec8d2dbeb43dbc2f89234b0eea9ca00', 1, 1622517088, 1625109088);
+INSERT INTO `fa_user_token` VALUES ('ea7ad44e9e08fd08671fa63dbceedda00129a9e6', 1, 1622517666, 1625109666);
+INSERT INTO `fa_user_token` VALUES ('f3693967c377614e117bec67387f9b59415132e2', 22, 1622514205, 1625106205);
+INSERT INTO `fa_user_token` VALUES ('f422f046c72c43b1ff4f1e1052149d54a91818b7', 2, 1622512771, 1625104771);
 
 -- ----------------------------
 -- Table structure for fa_version
