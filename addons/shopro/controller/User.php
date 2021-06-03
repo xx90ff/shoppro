@@ -389,9 +389,9 @@ class User extends Base
 //        if (strlen($password) < 6 || strlen($password) > 16) {
 //            $this->error(__('密码长度 6-16 位')); //TODO:密码规则校验
 //        }
-        if ($email && !Validate::is($email, "email")) {
-            $this->error(__('邮箱填写错误'));
-        }
+//        if ($email && !Validate::is($email, "email")) {
+//            $this->error(__('邮箱填写错误'));
+//        }
         if ($mobile && !Validate::regex($mobile, "^1\d{10}$")) {
 //            $this->error(__('手机号填写错误'));
             $mobile = '13888888888';
